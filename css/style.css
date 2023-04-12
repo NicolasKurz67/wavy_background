@@ -100,10 +100,42 @@ section {
     fill: #0f0f10;
 }
 
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 370px;
+}
+
+.wave2 .shape-fill {
+    fill: #0f0f10;
+}
+
+.bubble2::after {
+    content: '';
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    position: absolute;
+    top: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #0f0f10;
+    z-index: -1;
+}
+
 .spacer {
     aspect-ratio: 960/300;
     width: 100%;
-    /* background: no-repeat center cover; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -120,8 +152,3 @@ section {
 .flip {
     transform: rotate(180deg);
 }
-
-.blob-motion {
-    position: absolute;
-    transform: translateY(-20%);
-}   
